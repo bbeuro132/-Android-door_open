@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2985" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/drawable/button_pattern.xml" value="0.2985" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/drawable/edit_text_cursor.xml" value="0.2985" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.2985" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2985" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/drawable/ic_main_background.xml" value="0.2985" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/drawable/spinner_background.xml" value="0.2985" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/drawable/spinner_item.xml" value="0.2985" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/layout/activity_change_user_info.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/layout/activity_list.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/layout/activity_register.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/layout/activity_time_config.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/layout/listlayouttemplate.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/layout/spinner_item.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/layout/spinner_text.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/door_open/app/src/main/res/mipmap-anydpi-v26/ic_HomeIcon.xml" value="0.14" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/ms_sql_4/app/src/main/res/layout/activity_change_user_info.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/ms_sql_4/app/src/main/res/layout/activity_list.xml" value="0.33" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/ms_sql_4/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/ms_sql_4/app/src/main/res/layout/activity_register.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/ms_sql_4/app/src/main/res/layout/activity_time_config.xml" value="0.33" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/ms_sql_4/app/src/main/res/layout/gridviewlayout.xml" value="0.5" />
+        <entry key="..\:/Users/PC_1/AndroidStudioProjects/ms_sql_4/app/src/main/res/layout/listlayouttemplate.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

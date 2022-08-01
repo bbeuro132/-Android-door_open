@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColor"
+    tools:context=".ListActivity">
+
+    <Button
+        android:id="@+id/exitBtn3"
+        android:layout_width="176dp"
+        android:layout_height="73dp"
+        android:backgroundTint="#E91E63"
+        android:onClick="ExitBtn"
+        android:text="로그아웃"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
+
+    <Button
+        android:id="@+id/OpenDoorBtn1"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:onClick="OpenDoorBtn1_Click"
+        android:text="1층 문열기"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShopNameTextView"
+        app:layout_constraintVertical_bias="0.391" />
+
+    <Button
+        android:id="@+id/OpenDoorBtn2"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:onClick="OpenDoorBtn2_Click"
+        android:text="2층 문열기"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShopNameTextView"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <TextView
+        android:id="@+id/ShopNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

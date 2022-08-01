@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.door_open">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_seven_home"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_seven_home_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ms_sql_4">
+        <activity
+            android:name="com.example.door_open.ChangeUserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.door_open.TimeConfigActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.door_open.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.door_open.ListActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.door_open.MainActivity" />
+        <activity
+            android:name="com.example.door_open.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
