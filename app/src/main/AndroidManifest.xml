@@ -13,12 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ms_sql_4">
         <activity
-            android:name="com.example.door_open.ChangeUserInfoActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.door_open.TimeConfigActivity"
-            android:exported="false" />
-        <activity
             android:name="com.example.door_open.RegisterActivity"
             android:exported="false" />
         <activity

@@ -31,7 +31,6 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        //ListUpdate();
         NameUpdate();
         FloorBtnUpdate();
     }
@@ -72,66 +71,6 @@ public class ListActivity extends AppCompatActivity {
             visibleBtn.setVisibility(visibleBtn.VISIBLE);
         }
     }
-
-    /*
-    public void ListUpdate() {
-
-        lstv = (ListView) findViewById(R.id.SQL_List);
-
-        List<Map<String, String>> Mydatalist = null;
-        SqlDbFunction Mydata = new SqlDbFunction();
-        Mydatalist = Mydata.getlist();
-
-        String[] Fromw = {"MS_SHOP_NAME", "MS_SHOP_ID", "MS_DOOR"};
-        int[] Tow = {R.id.MS_SHOP_NAME, R.id.MS_SHOP_ID, R.id.MS_DOOR};
-        ad = new SimpleAdapter(ListActivity.this, Mydatalist, R.layout.listlayouttemplate, Fromw, Tow);
-        lstv.setAdapter(ad);
-
-        lstv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
-                builder.setMessage("문을 여시겠습니까?");
-                builder.setTitle("변경 팝업")
-                        .setCancelable(false)
-                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                                List<Map<String, String>> Mydatalist = null;
-                                SqlDbFunction Mydata = new SqlDbFunction();
-                                Mydatalist = Mydata.getlist();
-
-                                String name = Mydatalist.get(position).get("MS_SHOP_NAME");
-                                String shopID = Mydatalist.get(position).get("MS_SHOP_ID");
-
-                                shopID = shopID.replace(" ", "");
-
-                                Mydata.OpenDoor(name, shopID);
-
-                                List<Map<String, String>> Mydatalist2 = null;
-                                SqlDbFunction Mydata2 = new SqlDbFunction();
-                                Mydatalist2 = Mydata2.getlist();
-
-                                String[] Fromw = {"MS_SHOP_NAME", "MS_SHOP_ID", "MS_DOOR"};
-                                int[] Tow = {R.id.MS_SHOP_NAME, R.id.MS_SHOP_ID, R.id.MS_DOOR};
-                                ad = new SimpleAdapter(ListActivity.this, Mydatalist2, R.layout.listlayouttemplate, Fromw, Tow);
-                                lstv.setAdapter(ad);
-                                Toast.makeText(ListActivity.this, shopID, Toast.LENGTH_LONG).show();
-                            }
-                        })
-                        .setNegativeButton("닫기", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.cancel();
-                            }
-                        });
-                builder.show();
-            }
-        });
-    }
-    */
 
     public void OpenDoorBtn1_Click(View v) {
         List<Map<String, String>> Mydatalist = null;
@@ -197,60 +136,6 @@ public class ListActivity extends AppCompatActivity {
                     });
             builder.show();
         }
-    }
-
-    public void TimeConfigBtn_Click(View v) {
-        Intent intent = new Intent(getApplicationContext(), TimeConfigActivity.class);
-        startActivity(intent);
-    }
-
-    public void ChangeUserInfoBtn_Click(View v) {
-        Intent intent = new Intent(getApplicationContext(), ChangeUserInfoActivity.class);
-        startActivity(intent);
-    }
-
-    public void SearchBtn_Click(View v) {
-        /*
-        final EditText editText = new EditText(ListActivity.this);
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
-        builder.setMessage("Select할 이름을 입력해주세요");
-        builder.setView(editText);
-        builder.setTitle("입력창")
-                .setCancelable(false)
-                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        String test = editText.getText().toString();
-                        //Toast.makeText(ListActivity.this, test + "를 입력했으며 " + position + "번째", Toast.LENGTH_LONG).show();
-                        SelectFunc(test);
-
-                    }
-                })
-                .setNegativeButton("닫기", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
-        builder.show();
-        */
-    }
-
-
-    public void SelectFunc(String data) { //검색 후 검색값을 서치해주는 함수
-        /*
-        ListView lstv = (ListView) findViewById(R.id.SQL_List);
-
-        List<Map<String, String>> Mydatalist = null;
-        SqlDbFunction Mydata = new SqlDbFunction();
-        Mydatalist = Mydata.SearchFunc(data);
-
-        String[] Fromw = {"MS_NAME", "MS_GENDER", "MS_AGE"};
-        int[] Tow = {R.id.MS_NAME, R.id.MS_GENDER, R.id.MS_AGE};
-        ad = new SimpleAdapter(ListActivity.this, Mydatalist, R.layout.listlayouttemplate, Fromw, Tow);
-        lstv.setAdapter(ad);
-        */
     }
 
 }

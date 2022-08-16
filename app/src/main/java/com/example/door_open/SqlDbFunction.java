@@ -50,6 +50,7 @@ public class SqlDbFunction {
         return ShopName;
     }
 
+    /*
     public List<Map<String, String>> getlist() {
 
         List<Map<String, String>> data = null;
@@ -84,7 +85,9 @@ public class SqlDbFunction {
         }
         return data;
     }
+    */
 
+    //가입 시에 사용하는 메서드
     public void InsertList(String ID, String Pass) {
 
         int num = ReturnNum();
@@ -112,6 +115,7 @@ public class SqlDbFunction {
             e.printStackTrace();
         }
     }
+
 
     public boolean LoginFunc(String ID, String Pass) {
 
@@ -162,49 +166,6 @@ public class SqlDbFunction {
         return loginable;
     }
 
-    public void ChangePass(String id, String pass, String ChangePass) {
-
-        int errorCode = 0;
-        String msId = "";
-        String msPass = "";
-
-        List<Map<String, String>> data = null;
-        data = new ArrayList<Map<String, String>>();
-        try {
-
-            ConnectionHelper connectionHelper = new ConnectionHelper();
-            connect = connectionHelper.connectionclass();
-            if (connect != null) {
-                String qu = "Select APP_ID, APP_PW, SHOP_ID from APP_MEMBER_TB";
-                Statement statement = connect.createStatement();
-                ResultSet resultSet = statement.executeQuery(qu);
-
-                while (resultSet.next()) {
-                    msId = resultSet.getString("APP_ID");
-                    msPass = resultSet.getString("APP_PW");
-                    msId = msId.replace(" ", "");
-                    msPass = msPass.replace(" ", "");
-
-                    if (msId.equals(id) && msPass.equals(pass)) {
-                        qu = "UPDATE APP_MEMBER_TB SET APP_PW = " + ChangePass + " where APP_ID = '" + id + "' and SHOP_ID = " + shop_id;
-                        statement.executeUpdate(qu);
-                        break;
-                    }
-                }
-
-                ConnectionResult = "Success";
-                isSuccess = true;
-                connect.close();
-            }
-            else {
-                ConnectionResult = "Failed";
-            }
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public int ReturnNum() {
         int num = 0;
         int[] arrayNum;
@@ -253,6 +214,7 @@ public class SqlDbFunction {
         return maxNum;
     }
 
+    //로그인한 스터디카페의 총 층수를 받는 메서드
     public int ReturnFloorCount(String id) {
         int num = 0;
 
@@ -283,6 +245,7 @@ public class SqlDbFunction {
         return num;
     }
 
+    //1층 열기
     public void OpenDoor1(String name, String id) {
 
             try {
@@ -308,6 +271,7 @@ public class SqlDbFunction {
             }
     }
 
+    //2층 열기
     public void OpenDoor2(String name, String id) {
 
         try {
@@ -333,6 +297,7 @@ public class SqlDbFunction {
         }
     }
 
+    //프로그램 실행여부를 확인하는 메서드
     public boolean ReturnDoorNullable(String name, String shop_id, int floor) {
 
         boolean nullable = false;
@@ -370,90 +335,5 @@ public class SqlDbFunction {
         }
 
         return nullable;
-    }
-
-    public void UpdateTime(String open, String close, String week) {
-
-        List<Map<String, String>> data = null;
-        data = new ArrayList<Map<String, String>>();
-
-        if (open.equals("")) {
-            if (Integer.parseInt(close) >= 24)
-                close = "0";
-            try {
-
-                ConnectionHelper connectionHelper = new ConnectionHelper();
-                connect = connectionHelper.connectionclass();
-                if (connect != null) {
-
-                    String qu = "update WEEK_TB SET " + week + "_Close = " + close + " where SHOP_ID = '" + shop_id + "'";
-                    Statement statement = connect.createStatement();
-                    statement.executeUpdate(qu);
-
-                    ConnectionResult = "Success";
-                    isSuccess = true;
-                    connect.close();
-                }
-                else {
-                    ConnectionResult = "Failed";
-                }
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        else if (close.equals("")) {
-            if (Integer.parseInt(open) >= 24)
-                open = "0";
-            try {
-
-                ConnectionHelper connectionHelper = new ConnectionHelper();
-                connect = connectionHelper.connectionclass();
-                if (connect != null) {
-
-                    String qu = "update WEEK_TB SET " + week + "_Open = " + open + " where SHOP_ID = '" + shop_id + "'";
-                    Statement statement = connect.createStatement();
-                    statement.executeUpdate(qu);
-
-                    ConnectionResult = "Success";
-                    isSuccess = true;
-                    connect.close();
-                }
-                else {
-                    ConnectionResult = "Failed";
-                }
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        else {
-            if (Integer.parseInt(close) >= 24)
-                close = "0";
-            if (Integer.parseInt(open) >= 24)
-                open = "0";
-
-            try {
-                ConnectionHelper connectionHelper = new ConnectionHelper();
-                connect = connectionHelper.connectionclass();
-                if (connect != null) {
-
-                    String qu = "update WEEK_TB SET " + week + "_Open = " + open + ", " + week + "_Close = " + close + " where SHOP_ID = '" + shop_id + "'";
-                    Statement statement = connect.createStatement();
-                    statement.executeUpdate(qu);
-
-                    ConnectionResult = "Success";
-                    isSuccess = true;
-                    connect.close();
-                }
-                else {
-                    ConnectionResult = "Failed";
-                }
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
     }
 }

@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
         String Pass = personPassEditText.getText().toString();
 
 
-        //ListView lstv = (ListView) findViewById(R.id.SQL_List);
         List<Map<String, String>> Mydatalist = null;
         SqlDbFunction Mydata = new SqlDbFunction();
 

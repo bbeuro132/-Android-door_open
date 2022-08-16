@@ -11,7 +11,6 @@ import android.widget.EditText;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    ListActivity lstact = new ListActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
